@@ -1,0 +1,101 @@
+* {
+  padding: 0px;
+  margin: 0px;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  font-family: "Source Code Pro", monospace;
+  background-color: #b99664;
+}
+
+.counter-name {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #2f2963;
+}
+
+/* Stylato le hr per dare enfasi al counter contenuto tra di esse */
+hr {
+  border: 2px solid #2f2963;
+  width: 100vw;
+}
+
+/* Flexbox */
+.container-counter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+}
+
+.counter {
+  background-color: #ef946c;
+  color: #2f2963;
+  border: 3px solid #70877f;
+  border-radius: 20px;
+  min-width: 200px;
+  /* Impostata width: auto per un resize automatico del counter
+  se la lunghezza dei caratteri che compongono il numero diventa
+  maggiore rispetto alla min-width */
+  width: auto;
+  font-size: 4rem;
+  text-align: center;
+  padding: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.number-subtract,
+.number-add {
+  background-color: #ef946c;
+  color: #2f2963;
+  border: 3px solid #70877f;
+  cursor: pointer;
+  font-size: 4rem;
+  width: 100px;
+}
+
+.reset-button {
+  background-color: #ef946c;
+  color: #2f2963;
+  border: 3px solid #70877f;
+  cursor: pointer;
+  font-size: 2rem;
+}
+
+/* FATTO TRAMITE JAVASCRIPT */
+/* .number-subtract:hover,
+.number-add:hover, .resetButton {
+  background-color: #70877f;
+  border: 3px solid #ef946c;
+  color: #2f2963;
+} */
+
+/* Media Queries per piccoli schermi */
+@media screen and (max-width: 460px) {
+  .counter,
+  .number-subtract,
+  .number-add {
+    font-size: 2rem;
+  }
+
+  .counter {
+    min-width: 150px;
+  }
+
+  .number-subtract,
+  .number-add {
+    width: 65px;
+  }
+
+  .reset-button {
+    font-size: 1.5rem;
+  }
+}
