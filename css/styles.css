@@ -35,6 +35,11 @@ hr {
   padding: 10px;
 }
 
+.buttons-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
 .counter {
   background-color: #ef946c;
   color: #2f2963;
@@ -68,6 +73,7 @@ hr {
   border: 3px solid #70877f;
   cursor: pointer;
   font-size: 2rem;
+  align-self: center
 }
 
 /* FATTO TRAMITE JAVASCRIPT */
@@ -80,6 +86,7 @@ hr {
 
 /* Media Queries per piccoli schermi */
 @media screen and (max-width: 460px) {
+
   .counter,
   .number-subtract,
   .number-add {

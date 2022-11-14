@@ -1,86 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta
-      http-equiv="X-UA-Compatible"
-      content="IE=edge"
-    />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
-    />
 
-    <!-- Google Fonts <link> per il font Source Code Pro-->
-    <link
-      rel="preconnect"
-      href="https://fonts.googleapis.com"
-    />
-    <link
-      rel="preconnect"
-      href="https://fonts.gstatic.com"
-      crossorigin
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap"
-      rel="stylesheet"
-    />
-    <title>Javascript counter</title>
-
-    <!-- Utilizzato Bootstrap solo per un suo CSS
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <!-- Google Fonts <link> per il font Source Code Pro-->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap"
+    rel="stylesheet" />
+  <title>Javascript counter</title>
+  <!-- Utilizzato Bootstrap solo per un suo CSS
     button element, non ho infatti inserito il
     link per la sua libreria Javascript -->
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
-      crossorigin="anonymous"
-    />
-    <link
-      rel="stylesheet"
-      href="css/styles.css"
-    />
-  </head>
-  <body>
-    <h1 class="counter-name">JAVASCRIPT COUNTER</h1>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+    rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
+    crossorigin="anonymous" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
 
-    <hr />
-
+<body>
+  <h1 class="counter-name">JAVASCRIPT COUNTER</h1>
+  <hr />
+  <main class="buttons-wrapper">
     <div class="container-counter">
-      <button
-        type="button"
-        class="btn number-subtract"
-      >
+      <button type="button" class="btn number-subtract">
         -
       </button>
       <span class="counter">0</span>
-      <button
-        type="button"
-        class="btn number-add"
-      >
+      <button type="button" class="btn number-add">
         +
       </button>
       <!-- La classe btn appartiene a Bootstrap -->
     </div>
-    <button
-      type="button"
-      class="btn reset-button"
-    >
+    <button type="button" class="btn reset-button">
       RESET COUNTER
     </button>
-    <!-- Ho aggiunto di mia iniziativa un pulsate per
+  </main>
+  <!-- Ho aggiunto di mia iniziativa un pulsate per
     resettare il counter portando il numero a 0 -->
-
-    <hr />
-
-    <script
-      defer
-      src="js/scripts.js"
-    ></script>
-    <!-- Aggiunto attributo defer per far partire
+  <hr />
+  <script defer src="js/scripts.js"></script>
+  <!-- Aggiunto attributo defer per far partire
     Javascript solo una volta parsata completamente
     la pagina HTML; poteva essere omesso in quanto
     il tag script si trova alla fine del body e
     non nella head-->
-  </body>
+</body>
+
 </html>
