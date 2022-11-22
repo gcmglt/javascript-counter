@@ -1,40 +1,33 @@
-// *************************************************************
-// ****************** Dichiarazione variabili ******************
-// *************************************************************
-const COUNTER = document.querySelector( ".counter" )
-const SUBTRACT = document.querySelector( ".number-subtract" );
-const ADD = document.querySelector( ".number-add" );
-const RESET = document.querySelector( ".reset-button" );
-const WRAPPER = document.querySelector( ".buttons-wrapper" )
+//* Dichiarazione variabili
+const counterDisplay = document.querySelector(".counter-display");
+const subtractButton = document.querySelector(".subtract-button");
+const addButton = document.querySelector(".add-button");
+const resetButton = document.querySelector(".reset-button");
+const buttonsWrapper = document.querySelector(".buttons-wrapper");
 
-// *******************************************************
-// ****************** Funzioni pulsanti ******************
-// *******************************************************
-SUBTRACT.addEventListener( "click", ( ) => {
-  COUNTER.innerHTML = Number( COUNTER.innerHTML ) - 1;
-} )
+//* Funzione pulsanti -, + e RESET COUNTER
+buttonsWrapper.addEventListener("click", (e) => {
+  if (e.target === subtractButton) {
+    --counterDisplay.innerHTML;
+  } else if (e.target === addButton) {
+    ++counterDisplay.innerHTML;
+  } else {
+    counterDisplay.innerHTML = 0;
+  }
+});
 
-ADD.addEventListener( "click", ( ) => {
-  COUNTER.innerHTML = Number( COUNTER.innerHTML ) + 1;
-} )
-
-RESET.addEventListener( "click", ( ) => {
-  COUNTER.innerHTML = 0;
-} );
-
-// **************************************************
-// ******* Styler pulsanti (event delegation) *******
-// **************************************************
-WRAPPER.addEventListener( "mouseover", e => {
-  if ( e.target.tagName === "BUTTON" ) {
+//* Styler pulsanti mouse over
+buttonsWrapper.addEventListener("mouseover", (e) => {
+  if (e.target.tagName === "BUTTON") {
     e.target.style.backgroundColor = "#70877f";
     e.target.style.borderColor = "#ef946c";
   }
-} )
+});
 
-WRAPPER.addEventListener( "mouseout", e => {
-  if ( e.target.tagName === "BUTTON" ) {
+//* Styler pulsanti mouse out
+buttonsWrapper.addEventListener("mouseout", (e) => {
+  if (e.target.tagName === "BUTTON") {
     e.target.style.backgroundColor = "#ef946c";
     e.target.style.borderColor = "#70877f";
   }
-} )
+});
