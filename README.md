@@ -1,4 +1,4 @@
-# Javascript counter made for for start2impact University JS course
+# Javascript counter made for for start2impact University JS Basic course
 
 Ho creato questo counter per il progetto finale inerente al corso JavaScript Basics del master in Front End Development di start2imapct University.
 

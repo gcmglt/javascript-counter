@@ -11,9 +11,9 @@ buttonsWrapper.addEventListener("click", (e) => {
     --counterDisplay.innerHTML;
   } else if (e.target === addButton) {
     ++counterDisplay.innerHTML;
-  } else {
+  } else if (e.target === resetButton) {
     counterDisplay.innerHTML = 0;
-  }
+  } else return counterDisplay;
 });
 
 //* Styler pulsanti mouse over
