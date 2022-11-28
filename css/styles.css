@@ -1,6 +1,9 @@
-* {
+*,
+*::before,
+*::after {
   padding: 0px;
   margin: 0px;
+  box-sizing: border-box;
 }
 body {
   width: 100vw;
@@ -9,31 +12,33 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: 16px;
   font-family: "Source Code Pro", monospace;
   background-color: #b99664;
 }
 
-.counter-name {
+.counter-title {
   text-align: center;
-  margin-bottom: 30px;
+  margin-bottom: 25px;
   color: #2f2963;
 }
 hr {
   border: 2px solid #2f2963;
+  background-color: #2f2963;
   width: 100vw;
 }
 
 /* Flexbox */
-.container-counter {
+.counter-container {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   padding: 10px;
 }
 .buttons-wrapper {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  margin-bottom: 10px;
 }
 
 .counter-display {
@@ -52,39 +57,38 @@ hr {
   margin-left: 20px;
   margin-right: 20px;
 }
-.subtract-button,
-.add-button {
+.decrease-button,
+.increase-button {
   background-color: #ef946c;
   color: #2f2963;
   border: 3px solid #70877f;
   cursor: pointer;
-  font-size: 4rem;
-  width: 100px;
+  font-size: 3rem;
+  width: 80px;
+  margin: 0 5px;
 }
 .reset-button {
   background-color: #ef946c;
   color: #2f2963;
   border: 3px solid #70877f;
   cursor: pointer;
-  font-size: 2rem;
+  font-size: 3rem;
   align-self: center;
 }
 
 /* Media Queries per piccoli schermi */
 @media screen and (max-width: 460px) {
-  .counter,
-  .number-subtract,
-  .number-add {
+  .counter-display {
+    min-width: 150px;
+    font-size: 2.5rem;
+  }
+  .decrease-button,
+  .increase-button,
+  .reset-button {
     font-size: 2rem;
   }
-  .counter {
-    min-width: 150px;
-  }
-  .number-subtract,
-  .number-add {
+  .decrease-button,
+  .increase-button {
     width: 65px;
-  }
-  .reset-button {
-    font-size: 1.5rem;
   }
 }

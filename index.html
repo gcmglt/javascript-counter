@@ -34,28 +34,28 @@
   </head>
 
   <body>
-    <h1 class="counter-name">JAVASCRIPT COUNTER</h1>
     <hr />
+    <section class="counter-container">
+      <h1 class="counter-title">JAVASCRIPT COUNTER</h1>
+      <span class="counter-display">0</span>
+    </section>
     <main class="buttons-wrapper">
-      <div class="container-counter">
-        <button
-          type="button"
-          class="btn subtract-button">
-          -
-        </button>
-        <span class="counter-display">0</span>
-        <button
-          type="button"
-          class="btn add-button">
-          +
-        </button>
-        <!-- La classe btn appartiene a Bootstrap -->
-      </div>
       <button
         type="button"
-        class="btn reset-button">
-        RESET COUNTER
+        class="btn decrease-button">
+        -
+        <button
+          type="button"
+          class="btn reset-button">
+          RESET
+        </button>
       </button>
+      <button
+        type="button"
+        class="btn increase-button">
+        +
+      </button>
+      <!-- La classe btn appartiene a Bootstrap -->
     </main>
     <!-- Ho aggiunto di mia iniziativa un pulsate per
     resettare il counter portando il numero a 0 -->

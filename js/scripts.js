@@ -1,22 +1,24 @@
 //* Dichiarazione variabili
 const counterDisplay = document.querySelector(".counter-display");
-const subtractButton = document.querySelector(".subtract-button");
-const addButton = document.querySelector(".add-button");
-const resetButton = document.querySelector(".reset-button");
+const decreaseButton = document.querySelector(".decrease-button");
+const increaseButton = document.querySelector(".increase-button");
 const buttonsWrapper = document.querySelector(".buttons-wrapper");
 
-//* Funzione pulsanti -, + e RESET COUNTER
+//* Logica funzionamento pulsanti
+let count = 0;
+
 buttonsWrapper.addEventListener("click", (e) => {
-  if (e.target === subtractButton) {
-    --counterDisplay.innerHTML;
-  } else if (e.target === addButton) {
-    ++counterDisplay.innerHTML;
-  } else if (e.target === resetButton) {
-    counterDisplay.innerHTML = 0;
-  } else return counterDisplay;
+  if (e.target === decreaseButton) {
+    count--;
+  } else if (e.target === increaseButton) {
+    count++;
+  } else {
+    count = 0;
+  }
+  counterDisplay.innerHTML = count;
 });
 
-//* Styler pulsanti mouse over
+//* Styler pulsanti al mouseover
 buttonsWrapper.addEventListener("mouseover", (e) => {
   if (e.target.tagName === "BUTTON") {
     e.target.style.backgroundColor = "#70877f";
@@ -24,7 +26,7 @@ buttonsWrapper.addEventListener("mouseover", (e) => {
   }
 });
 
-//* Styler pulsanti mouse out
+//* Styler pulsanti al mouseout
 buttonsWrapper.addEventListener("mouseout", (e) => {
   if (e.target.tagName === "BUTTON") {
     e.target.style.backgroundColor = "#ef946c";
