@@ -10,3 +10,5 @@ Per stylare i pulsanti durante eventi come mouseover e mouseout, ho preferito us
 EDIT 1: Codice ottimizzato a seguito delle correzioni del coach Luca Pagliaro.
 
 Per provare l'applicazione recarsi a questo link: https://javascript-counter-gcmglt.netlify.app/
+
+![app-screenshot](https://github.com/gcmglt/javascript-counter/blob/main/javascript-basic-project-screenshot.png?raw=true)
