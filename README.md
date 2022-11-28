@@ -1,7 +1,7 @@
 # JavaScript counter
 ### Made for start2impact University
 
-Ho creato questo counter per il progetto finale inerente al corso JavaScript Basics del master in Front End Development di start2imapct University.
+Ho creato questo counter per il progetto del corso JavaScript Basics del master in Front End Development di start2imapct University.
 
 L'obbiettivo era quello di creare un counter con JavaScript, che partisse dal numero 0, e che tramite due pulsanti (+ e -) facesse aumentare o diminuire il suddetto contatore.
 A queste linee guida ho voluto aggiungere un pulsante di reset, che riporta il counter alla posizione iniziale (0).
