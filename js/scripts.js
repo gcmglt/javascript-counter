@@ -1,4 +1,8 @@
 //* Manipolazione DOM e creazione componenti del counter
+//* Dichiarazione variabili
+const counterDisplay = document.querySelector(".counter-display");
+const decreaseButton = document.querySelector(".decrease-button");
+const increaseButton = document.querySelector(".increase-button");
 const buttonsWrapper = document.querySelector(".buttons-wrapper");
 const counterContainer = document.querySelector(".counter-container");
 
@@ -24,6 +28,9 @@ buttonsWrapper.append(resetButton);
 //* Funzione pulsanti
 let count = 0;
 
+//* Logica funzionamento pulsanti
+let count = 0;
+
 buttonsWrapper.addEventListener("click", (e) => {
   if (e.target === subtractButton) {
     count--;
@@ -34,9 +41,17 @@ buttonsWrapper.addEventListener("click", (e) => {
   }
 
   counterDisplay.innerHTML = count;
+  if (e.target === decreaseButton) {
+    count--;
+  } else if (e.target === increaseButton) {
+    count++;
+  } else {
+    count = 0;
+  }
+  counterDisplay.innerHTML = count;
 });
 
-//* Styler pulsanti mouse over
+//* Styler pulsanti al mouseover
 buttonsWrapper.addEventListener("mouseover", (e) => {
   if (e.target.tagName === "BUTTON") {
     e.target.style.backgroundColor = "#70877f";
@@ -44,7 +59,7 @@ buttonsWrapper.addEventListener("mouseover", (e) => {
   }
 });
 
-//* Styler pulsanti mouse out
+//* Styler pulsanti al mouseout
 buttonsWrapper.addEventListener("mouseout", (e) => {
   if (e.target.tagName === "BUTTON") {
     e.target.style.backgroundColor = "#ef946c";
