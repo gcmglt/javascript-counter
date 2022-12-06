@@ -37,25 +37,10 @@
     <h1 class="counter-name">JAVASCRIPT COUNTER</h1>
     <hr />
     <main class="buttons-wrapper">
-      <div class="container-counter">
-        <button
-          type="button"
-          class="btn subtract-button">
-          -
-        </button>
-        <span class="counter-display">0</span>
-        <button
-          type="button"
-          class="btn add-button">
-          +
-        </button>
-        <!-- La classe btn appartiene a Bootstrap -->
+      <div class="counter-container">
+        <!-- Qui saranno presenti i tasti + e -, e il display del counter -->
       </div>
-      <button
-        type="button"
-        class="btn reset-button">
-        RESET COUNTER
-      </button>
+      <!-- Qui sarà presente il tasto reset -->
     </main>
     <!-- Ho aggiunto di mia iniziativa un pulsate per
     resettare il counter portando il numero a 0 -->
@@ -63,10 +48,5 @@
     <script
       defer
       src="js/scripts.js"></script>
-    <!-- Aggiunto attributo defer per far partire
-    Javascript solo una volta parsata completamente
-    la pagina HTML; poteva essere omesso in quanto
-    il tag script si trova alla fine del body e
-    non nella head-->
   </body>
 </html>
